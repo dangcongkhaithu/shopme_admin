@@ -40,7 +40,13 @@ class HomePageState extends State<HomePage> {
           ),
         ),
       ),
-      child: Center(),
+      child: Center(
+        child: SizedBox(
+          width: 200,
+          height: 200,
+          child: FlutterLogo(),
+        ),
+      ),
     );
   }
 }

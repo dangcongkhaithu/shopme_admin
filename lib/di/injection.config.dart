@@ -1,5 +1,8 @@
 import 'package:get_it/get_it.dart';
+import 'package:shopme_admin/blocs/category_bloc/category_bloc.dart';
 import 'package:shopme_admin/blocs/get_user_profile_bloc/get_user_profile_bloc.dart';
+import 'package:shopme_admin/blocs/order_bloc/order_bloc.dart';
+import 'package:shopme_admin/blocs/product_bloc/product_bloc.dart';
 import 'package:shopme_admin/blocs/sign_in_bloc/sign_in_bloc.dart';
 import 'package:shopme_admin/data/remote/datasource/category_datasource.dart';
 import 'package:shopme_admin/data/remote/datasource/order_datasource.dart';
@@ -41,4 +44,7 @@ void registerRepository(GetIt getIt) {
 void registerBloC(GetIt getIt) {
   getIt.registerFactory<SignInBloc>(() => SignInBloc());
   getIt.registerFactory<GetUserProfileBloc>(() => GetUserProfileBloc());
+  getIt.registerFactory<OrderBloc>(() => OrderBloc());
+  getIt.registerFactory<ProductBloc>(() => ProductBloc());
+  getIt.registerFactory<CategoryBloc>(() => CategoryBloc());
 }

@@ -13,6 +13,12 @@ import 'package:shopme_admin/resources/app_colors.dart';
 class SignInPage extends StatefulWidget {
   @override
   State<StatefulWidget> createState() => SignInPageState();
+
+  static MaterialPageRoute getRoute() {
+    return MaterialPageRoute(
+      builder: (context) => SignInPage(),
+    );
+  }
 }
 
 class SignInPageState extends State<SignInPage> {

@@ -22,7 +22,7 @@ class _ApplicationState extends State<Application> {
         GlobalMaterialLocalizations.delegate,
         GlobalWidgetsLocalizations.delegate,
       ],
-      home: HomePage(),
+      home: SignInPage(),
     );
   }
 }
