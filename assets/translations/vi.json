@@ -1,0 +1,23 @@
+{
+  "common": {
+    "home": "Trang chủ",
+    "search": "Tìm kiếm",
+    "account": "Tài khoản",
+    "read_more": "Xem thêm"
+  },
+  "error": {
+    "something_went_wrong": "Có lỗi xảy ra!"
+  },
+  "category": {
+    "category": "Danh mục"
+  },
+  "product": {
+    "product": "Sản phẩm"
+  },
+  "account": {
+    "sign_in": "ĐĂNG NHẬP",
+    "sign_up": "ĐĂNG KÝ",
+    "new_user": "Bạn chưa có tài khoản ?",
+    "create_account": "Đăng ký ngay"
+  }
+}
