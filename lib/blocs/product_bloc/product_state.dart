@@ -26,3 +26,14 @@ class AddProductSuccessState extends ProductState {
   @override
   List<Object?> get props => [response];
 }
+
+class DeleteProductSuccessState extends ProductState {
+  final ResponseBase response;
+
+  DeleteProductSuccessState({
+    required this.response,
+  });
+
+  @override
+  List<Object?> get props => [response];
+}

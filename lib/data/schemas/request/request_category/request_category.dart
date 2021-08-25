@@ -5,6 +5,8 @@ part 'request_category.g.dart';
 @JsonSerializable()
 class RequestCategory {
   final int id;
+
+  @JsonKey(name: "categoryName")
   final String name;
   final String description;
   final String imageUrl;

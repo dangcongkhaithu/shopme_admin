@@ -8,6 +8,8 @@ class RequestProduct {
   final int id;
   final String name;
   final String description;
+
+  @JsonKey(name: "imageURL")
   final String imageUrl;
   final double price;
   final int categoryId;

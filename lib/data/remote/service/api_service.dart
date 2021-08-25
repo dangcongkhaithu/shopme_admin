@@ -38,6 +38,9 @@ abstract class RestClient {
   @POST("/product/add")
   Future<ResponseBase> addProduct(@Body() RequestProduct request);
 
+  @DELETE("/product/delete/{productId}")
+  Future<ResponseBase> deleteProduct(@Path() int productId);
+
   //Category
   @GET("/child_category/")
   Future<List<Category>> getCategories();

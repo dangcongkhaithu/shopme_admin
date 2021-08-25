@@ -8,6 +8,8 @@ abstract class ProductRepository {
   Future<List<Product>> getProducts();
 
   Future<ResponseBase> addProduct(RequestProduct request);
+
+  Future<ResponseBase> deleteProduct(int productId);
 }
 
 class ProductRepositoryImpl extends ProductRepository {
@@ -23,5 +25,10 @@ class ProductRepositoryImpl extends ProductRepository {
   @override
   Future<ResponseBase> addProduct(RequestProduct request) {
     return _productDatasource.addProduct(request);
+  }
+
+  @override
+  Future<ResponseBase> deleteProduct(int productId) {
+    return _productDatasource.deleteProduct(productId);
   }
 }

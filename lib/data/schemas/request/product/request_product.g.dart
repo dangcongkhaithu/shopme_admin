@@ -11,7 +11,7 @@ RequestProduct _$RequestProductFromJson(Map<String, dynamic> json) {
     id: json['id'] as int,
     name: json['name'] as String,
     description: json['description'] as String,
-    imageUrl: json['imageUrl'] as String,
+    imageUrl: json['imageURL'] as String,
     price: (json['price'] as num).toDouble(),
     categoryId: json['categoryId'] as int,
   );
@@ -22,7 +22,7 @@ Map<String, dynamic> _$RequestProductToJson(RequestProduct instance) =>
       'id': instance.id,
       'name': instance.name,
       'description': instance.description,
-      'imageUrl': instance.imageUrl,
+      'imageURL': instance.imageUrl,
       'price': instance.price,
       'categoryId': instance.categoryId,
     };

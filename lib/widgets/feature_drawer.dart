@@ -3,6 +3,7 @@ import 'package:flutter/widgets.dart';
 import 'package:shopme_admin/data/shared_preferences/shared_pref.dart';
 import 'package:shopme_admin/di/injection.dart';
 import 'package:shopme_admin/pages/order/order_page.dart';
+import 'package:shopme_admin/pages/product/product_page.dart';
 import 'package:shopme_admin/pages/sign_in/sign_in_page.dart';
 import 'package:shopme_admin/resources/app_colors.dart';
 
@@ -49,12 +50,13 @@ class FeatureDrawerState extends State<FeatureDrawer> {
               () => Navigator.of(context).push(OrderPage.getRoute()),
             ),
             const SizedBox(height: 10),
-            _buildDrawerItem("User Management", () {}),
+            _buildDrawerItem(
+              "Product Management",
+              () => Navigator.of(context).push(
+                ProductPage.getRoute(),
+              ),
+            ),
             const SizedBox(height: 10),
-            _buildDrawerItem("Product Management", () {}),
-            const SizedBox(height: 10),
-            _buildDrawerItem("Category Management", () {}),
-            const SizedBox(height: 50),
             /*_buildDrawerItem("Sign Out", () {
               _sharedPref.storeToken("");
               Navigator.of(context).push(SignInPage.getRoute());

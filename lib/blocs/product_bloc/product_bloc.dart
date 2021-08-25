@@ -21,4 +21,11 @@ class ProductBloc extends BaseBloc with SingleBlocMixin {
       onSuccess: (response) => AddProductSuccessState(response: response),
     );
   }
+
+  void deleteProduct(int productId) {
+    single<ResponseBase>(
+      () => _repository.deleteProduct(productId),
+      onSuccess: (response) => DeleteProductSuccessState(response: response),
+    );
+  }
 }

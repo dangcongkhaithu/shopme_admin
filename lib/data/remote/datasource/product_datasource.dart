@@ -10,6 +10,8 @@ abstract class ProductDatasource {
   Future<List<Product>> getProducts();
 
   Future<ResponseBase> addProduct(RequestProduct request);
+
+  Future<ResponseBase> deleteProduct(int productId);
 }
 
 class ProductDatasourceImpl extends ProductDatasource {
@@ -39,6 +41,22 @@ class ProductDatasourceImpl extends ProductDatasource {
   Future<ResponseBase> addProduct(RequestProduct request) async {
     late ResponseBase response;
     await _client.addProduct(request).then((value) => response = value).catchError((Object obj) {
+      switch (obj.runtimeType) {
+        case DioError:
+          final res = (obj as DioError).response;
+          _logger.e("Got error : ${res?.statusCode} -> ${res?.statusMessage}");
+          break;
+        default:
+      }
+    });
+
+    return response;
+  }
+
+  @override
+  Future<ResponseBase> deleteProduct(int productId) async {
+    late ResponseBase response;
+    await _client.deleteProduct(productId).then((value) => response = value).catchError((Object obj) {
       switch (obj.runtimeType) {
         case DioError:
           final res = (obj as DioError).response;
